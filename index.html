@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>DAN WOOD FURNITURE S.R.L. – Mobilier la comandă în Apahida</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DAN WOOD FURNITURE S.R.L. proiectează și produce mobilier la comandă pentru locuințe, spații instituționale și bucătării personalizate în Apahida și zona Cluj.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #060815;
+            color: #f5f7fb;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .page-wrapper {
+            min-height: 100vh;
+            background: radial-gradient(circle at top left, #273350 0, #050714 55%, #02030a 100%);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            backdrop-filter: blur(18px);
+            background: rgba(4, 6, 20, 0.82);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 20px;
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand-logo {
+            width: 32px;
+            height: 32px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #f4c96b, #f0793f);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 18px;
+            color: #111;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+        }
+
+        .brand-tagline {
+            font-size: 11px;
+            opacity: 0.7;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .nav a {
+            font-size: 14px;
+            opacity: 0.85;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .nav a:hover {
+            opacity: 1;
+            transform: translateY(-1px);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .header-badge {
+            font-size: 11px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.8;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 10px 18px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            background: #f4c96b;
+            color: #111111;
+            transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.16s ease, opacity 0.16s ease;
+        }
+
+        .btn span.icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 18px;
+            height: 18px;
+            border-radius: 999px;
+            background: rgba(0, 0, 0, 0.14);
+            font-size: 12px;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 14px 26px rgba(0, 0, 0, 0.45);
+            background: #f6d27f;
+        }
+
+        .btn-secondary {
+            background: rgba(7, 11, 35, 0.85);
+            color: #f5f7fb;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(18, 24, 60, 1);
+        }
+
+        .hero {
+            position: relative;
+            padding-top: 96px;
+        }
+
+        .hero-inner {
+            position: relative;
+            display: grid;
+            grid-template-columns: minmax(0, 2.3fr) minmax(0, 1.6fr);
+            gap: 26px;
+            align-items: stretch;
+            padding: 34px 0 60px 0;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(180deg, rgba(3, 7, 18, 0.69), rgba(3, 7, 18, 0.96)), url("https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg");
+            background-size: cover;
+            background-position: center;
+            opacity: 0.72;
+            pointer-events: none;
+        }
+
+        .hero-layer {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 22px;
+        }
+
+        .hero-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 13px;
+            border-radius: 999px;
+            background: rgba(10, 13, 34, 0.88);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 12px;
+        }
+
+        .hero-kicker-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: #7df29f;
+        }
+
+        .hero-title {
+            font-size: 40px;
+            line-height: 1.12;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            max-width: 590px;
+        }
+
+        .hero-subtitle {
+            max-width: 480px;
+            font-size: 14px;
+            opacity: 0.86;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-top: 10px;
+            font-size: 12px;
+            opacity: 0.82;
+        }
+
+        .hero-meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-meta-label {
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-size: 10px;
+            opacity: 0.6;
+        }
+
+        .hero-meta-value {
+            font-weight: 500;
+        }
+
+        .hero-right {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .hero-card {
+            width: 100%;
+            max-width: 360px;
+            border-radius: 26px;
+            background: rgba(8, 11, 33, 0.96);
+            overflow: hidden;
+            box-shadow: 0 22px 60px rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-card-media {
+            position: relative;
+            padding: 16px 16px 0 16px;
+        }
+
+        .hero-card-media-inner {
+            border-radius: 22px;
+            overflow: hidden;
+            background-image: url("https://images.pexels.com/photos/1080696/pexels-photo-1080696.jpeg");
+            background-size: cover;
+            background-position: center;
+            height: 210px;
+        }
+
+        .hero-card-play {
+            position: absolute;
+            bottom: 26px;
+            right: 32px;
+            width: 46px;
+            height: 46px;
+            border-radius: 999px;
+            background: rgba(6, 10, 30, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-card-play span {
+            display: inline-block;
+            margin-left: 3px;
+            font-size: 18px;
+        }
+
+        .hero-card-body {
+            padding: 14px 18px 16px 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .hero-card-title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .hero-card-text {
+            font-size: 13px;
+            opacity: 0.8;
+        }
+
+        .hero-card-footer {
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .hero-card-chip {
+            font-size: 11px;
+            padding: 5px 10px;
+            border-radius: 999px;
+            background: rgba(18, 23, 54, 1);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .hero-card-link {
+            font-size: 13px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            opacity: 0.92;
+        }
+
+        .hero-card-link span {
+            font-size: 16px;
+        }
+
+        main {
+            position: relative;
+            z-index: 1;
+        }
+
+        .section {
+            padding: 40px 0;
+        }
+
+        .section-inner {
+            border-radius: 26px;
+            background: rgba(7, 9, 26, 0.98);
+            padding: 26px 22px 26px 22px;
+            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
+        }
+
+        .section-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 18px;
+            margin-bottom: 20px;
+        }
+
+        .section-title-wrap {
+            max-width: 540px;
+        }
+
+        .section-eyebrow {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            opacity: 0.6;
+            margin-bottom: 4px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            font-size: 13px;
+            max-width: 420px;
+            opacity: 0.8;
+        }
+
+        .section-bullet {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .about-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.8fr) minmax(0, 1.4fr);
+            gap: 28px;
+        }
+
+        .about-text {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .about-text p + p {
+            margin-top: 10px;
+        }
+
+        .about-card {
+            border-radius: 22px;
+            background: linear-gradient(145deg, #14182f, #070a1e);
+            padding: 18px 18px 16px 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 11px;
+        }
+
+        .badge {
+            padding: 6px 12px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(10, 12, 30, 0.9);
+        }
+
+        .about-highlight {
+            font-size: 13px;
+            opacity: 0.85;
+        }
+
+        .about-metrics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .metric {
+            flex: 1 1 90px;
+        }
+
+        .metric-value {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .metric-label {
+            font-size: 11px;
+            opacity: 0.7;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 2.3fr) minmax(0, 1.7fr);
+            gap: 26px;
+        }
+
+        .services-list {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: 14px;
+        }
+
+        .service-card {
+            display: grid;
+            grid-template-columns: 64px minmax(0, 1fr);
+            gap: 18px;
+            align-items: flex-start;
+            padding: 16px 16px 14px 16px;
+            border-radius: 18px;
+            background: rgba(14, 18, 46, 0.98);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 20px;
+            background: radial-gradient(circle at 30% 20%, #f4c96b, #f16d3c);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #111;
+            font-weight: 700;
+        }
+
+        .service-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .service-text {
+            font-size: 13px;
+            opacity: 0.88;
+        }
+
+        .services-side {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .services-side-card {
+            border-radius: 18px;
+            padding: 14px 14px 14px 16px;
+            background: rgba(10, 14, 37, 0.96);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .services-side-title {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .services-side-text {
+            font-size: 13px;
+            opacity: 0.82;
+        }
+
+        .benefits-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 2fr) minmax(0, 1.7fr);
+            gap: 24px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .benefit-card {
+            border-radius: 18px;
+            background: rgba(13, 16, 40, 0.98);
+            padding: 14px 13px 16px 13px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .benefit-icon {
+            width: 22px;
+            height: 22px;
+            border-radius: 999px;
+            background: rgba(125, 242, 159, 0.14);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+        }
+
+        .benefit-title {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .benefit-text {
+            font-size: 12px;
+            opacity: 0.84;
+        }
+
+        .benefits-note {
+            font-size: 13px;
+            opacity: 0.82;
+        }
+
+        .process-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.8fr) minmax(0, 1.6fr);
+            gap: 26px;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: 12px;
+        }
+
+        .process-step {
+            display: grid;
+            grid-template-columns: 40px minmax(0, 1fr);
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .process-step-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 999px;
+            background: radial-gradient(circle at 20% 20%, #f4c96b, #f16d3c);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #111;
+            font-size: 17px;
+        }
+
+        .process-step-body {
+            border-radius: 16px;
+            padding: 11px 13px 11px 13px;
+            background: rgba(13, 17, 39, 0.94);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .process-step-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .process-step-text {
+            font-size: 13px;
+            opacity: 0.84;
+        }
+
+        .process-side-card {
+            border-radius: 20px;
+            background-image: linear-gradient(135deg, rgba(14, 18, 46, 0.97), rgba(7, 11, 32, 0.97));
+            padding: 16px 16px 18px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .process-side-tag {
+            font-size: 11px;
+            padding: 5px 10px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            align-self: flex-start;
+        }
+
+        .process-side-title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .process-side-text {
+            font-size: 13px;
+            opacity: 0.86;
+        }
+
+        .contact-section {
+            padding-bottom: 50px;
+        }
+
+        .contact-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.8fr) minmax(0, 1.5fr);
+            gap: 24px;
+            align-items: center;
+        }
+
+        .contact-phrases {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .contact-phrase {
+            font-size: 13px;
+            opacity: 0.86;
+        }
+
+        .contact-card {
+            border-radius: 20px;
+            background: rgba(10, 13, 34, 0.98);
+            padding: 18px 18px 18px 18px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact-chip-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            font-size: 11px;
+        }
+
+        .contact-chip {
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: rgba(19, 24, 58, 0.96);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .contact-card-title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .contact-card-text {
+            font-size: 13px;
+            opacity: 0.84;
+        }
+
+        .contact-card-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 4px;
+        }
+
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 16px 0 26px 0;
+            background: #050712;
+        }
+
+        .footer-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 16px;
+            font-size: 12px;
+            opacity: 0.82;
+        }
+
+        .footer-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .footer-contact a {
+            text-decoration: underline;
+            text-decoration-color: rgba(244, 201, 107, 0.8);
+            text-underline-offset: 3px;
+        }
+
+        .footer-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            text-align: right;
+        }
+
+        .modal-backdrop {
+            position: fixed;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 18px;
+            background: rgba(3, 6, 20, 0.76);
+            backdrop-filter: blur(18px);
+            z-index: 80;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        .modal-backdrop.visible {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal {
+            width: 100%;
+            max-width: 480px;
+            border-radius: 24px;
+            background: #050716;
+            box-shadow: 0 22px 60px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            padding: 20px 20px 18px 20px;
+        }
+
+        .modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .modal-title {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .modal-close {
+            width: 26px;
+            height: 26px;
+            border-radius: 999px;
+            border: none;
+            background: rgba(18, 24, 60, 1);
+            color: #f5f7fb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .modal-body {
+            font-size: 13px;
+            opacity: 0.88;
+        }
+
+        .modal-form {
+            margin-top: 14px;
+            display: grid;
+            gap: 12px;
+        }
+
+        .form-field {
+            display: grid;
+            gap: 4px;
+        }
+
+        .form-label {
+            font-size: 12px;
+            opacity: 0.86;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            background: rgba(9, 12, 32, 0.96);
+            color: #f5f7fb;
+            font-size: 13px;
+            outline: none;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            border-color: rgba(244, 201, 107, 0.9);
+            box-shadow: 0 0 0 1px rgba(244, 201, 107, 0.3);
+        }
+
+        .form-textarea {
+            min-height: 90px;
+            resize: vertical;
+        }
+
+        .form-hint {
+            font-size: 11px;
+            opacity: 0.75;
+        }
+
+        .modal-footer {
+            margin-top: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .modal-success-body {
+            font-size: 13px;
+            opacity: 0.9;
+            margin-top: 4px;
+        }
+
+        @media (max-width: 960px) {
+            .hero-inner {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .hero-right {
+                justify-content: flex-start;
+            }
+
+            .about-layout,
+            .services-grid,
+            .benefits-layout,
+            .process-layout,
+            .contact-layout {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .benefits-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .header-inner {
+                gap: 12px;
+            }
+
+            .nav {
+                display: none;
+            }
+
+            .footer-meta {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-title {
+                font-size: 30px;
+            }
+
+            .section-inner {
+                padding: 20px 16px 20px 16px;
+            }
+
+            .benefits-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .hero-card {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrapper">
+    <header>
+        <div class="header-inner">
+            <div class="brand">
+                <div class="brand-logo">D</div>
+                <div class="brand-text">
+                    <div class="brand-name">DAN WOOD FURNITURE</div>
+                    <div class="brand-tagline">Mobilier la comandă în Apahida</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <a href="#acasa">Acasă</a>
+                <a href="#despre">Despre atelier</a>
+                <a href="#servicii">Servicii</a>
+                <a href="#beneficii">De ce noi</a>
+                <a href="#proces">Proces</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <div class="header-badge">Program: Luni–Vineri, 9:00–18:00</div>
+                <button class="btn-secondary btn" type="button" id="openContactHeader">
+                    <span>Scrie-ne</span>
+                    <span class="icon">✉</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="acasa" class="hero">
+            <div class="hero-bg"></div>
+            <div class="container hero-layer">
+                <div class="hero-inner">
+                    <div class="hero-left">
+                        <div class="hero-kicker">
+                            <div class="hero-kicker-dot"></div>
+                            <span>Atelier de mobilier personalizat din Apahida</span>
+                        </div>
+                        <h1 class="hero-title">
+                            Cheia ta pentru mobilier gândit exact pentru spațiul tău
+                        </h1>
+                        <p class="hero-subtitle">
+                            La DAN WOOD FURNITURE S.R.L. proiectăm și producem mobilier pentru locuințe, birouri și spații instituționale,
+                            de la primele schițe și randări 3D până la montajul final în STR. LIBERTĂȚII NR. 192 și în toată zona Cluj.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="#servicii" class="btn">
+                                <span>Vezi serviciile noastre</span>
+                                <span class="icon">➜</span>
+                            </a>
+                            <button class="btn btn-secondary" type="button" id="openContactHero">
+                                <span>Trimite un brief de proiect</span>
+                            </button>
+                        </div>
+                        <div class="hero-meta">
+                            <div class="hero-meta-item">
+                                <span class="hero-meta-label">Experiență</span>
+                                <span class="hero-meta-value">peste 10 ani în mobilier la comandă</span>
+                            </div>
+                            <div class="hero-meta-item">
+                                <span class="hero-meta-label">Tipuri de proiecte</span>
+                                <span class="hero-meta-value">locuințe, birouri, spații educaționale și medicale</span>
+                            </div>
+                            <div class="hero-meta-item">
+                                <span class="hero-meta-label">Garanție</span>
+                                <span class="hero-meta-value">până la 5 ani pentru structuri și feronerie</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-right">
+                        <article class="hero-card">
+                            <div class="hero-card-media">
+                                <div class="hero-card-media-inner"></div>
+                                <div class="hero-card-play">
+                                    <span>▶</span>
+                                </div>
+                            </div>
+                            <div class="hero-card-body">
+                                <h2 class="hero-card-title">Tur printr-o bucătărie realizată de noi</h2>
+                                <p class="hero-card-text">
+                                    Vezi cum îmbinăm fronturi din lemn cu texturi mate, feronerie premium și soluții inteligente de depozitare pentru a folosi fiecare colț al spațiului.
+                                </p>
+                                <div class="hero-card-footer">
+                                    <div class="hero-card-chip">Proiect în Apahida, 2024</div>
+                                    <a href="#servicii" class="hero-card-link">
+                                        <span>Detalii despre proces</span>
+                                        <span>↗</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="despre" class="section">
+            <div class="container">
+                <div class="section-inner">
+                    <div class="section-header">
+                        <div class="section-title-wrap">
+                            <div class="section-eyebrow">Povestea atelierului</div>
+                            <h2 class="section-title">Cine suntem și cum construim mobilier care rămâne în timp</h2>
+                        </div>
+                        <div class="section-subtitle">
+                            DAN WOOD FURNITURE S.R.L. este atelierul de mobilier din Apahida în care tehnologia de prelucrare modernă se întâlnește cu grija pentru detaliu a unei echipe de dulgheri și designeri.
+                        </div>
+                    </div>
+                    <div class="about-layout">
+                        <div class="about-text">
+                            <p>
+                                Lucrăm în STR. LIBERTĂȚII NR. 192, într-un spațiu unde lemnul masiv, plăcile furniruite și materialele compozite capătă formă
+                                în mobilier adaptat la milimetru pentru fiecare proiect. Nu folosim soluții standard, ci proiectăm individual, ținând cont de
+                                arhitectura locuinței, lumină, flux de circulație și stilul de viață al familiei sau echipei tale.
+                            </p>
+                            <p>
+                                Colaborăm cu furnizori de feronerie recunoscuți internațional, integrați în sertare cu amortizare, sisteme de ridicare a fronturilor și
+                                mecanisme de colț accesibile, astfel încât mobilierul să fie plăcut nu doar la vedere, ci și la utilizare zilnică.
+                            </p>
+                            <p>
+                                Pentru fiecare proiect realizăm mai întâi variante de layout și randări digitale, astfel încât să poți evalua proporțiile și combinațiile
+                                de culori înainte de a începe producția. Atelierul nostru intern ne permite să controlăm întregul flux: debitare, căntuire,
+                                asamblare, finisare și montaj la locația ta.
+                            </p>
+                            <p>
+                                Lucrăm atât pentru clienți rezidențiali, cât și pentru proiecte instituționale și comerciale: școli, clinici, birouri, showroom-uri.
+                                Gestionăm intern măsurătorile, planurile tehnice, livrarea și montajul, astfel încât tu să ai un singur partener pe tot parcursul.
+                            </p>
+                        </div>
+                        <aside class="about-card">
+                            <div class="badge-row">
+                                <div class="badge">Atelier local din Apahida</div>
+                                <div class="badge">Producție proprie</div>
+                                <div class="badge">Consultanță de design inclusă</div>
+                            </div>
+                            <p class="about-highlight">
+                                Fiecare proiect pornește de la o discuție directă cu tine: analizăm spațiul existent, bugetul și modul în care folosești încăperea,
+                                iar apoi propunem soluții care să transforme mobilierul într-un instrument de lucru, nu doar într-un obiect decorativ.
+                            </p>
+                            <div class="about-metrics">
+                                <div class="metric">
+                                    <div class="metric-value">300+</div>
+                                    <div class="metric-label">proiecte finalizate în Cluj și împrejurimi</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">4,8★</div>
+                                    <div class="metric-label">media evaluărilor primite de la clienți</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">5 ani</div>
+                                    <div class="metric-label">garanție pentru mobilă de bucătărie</div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicii" class="section">
+            <div class="container">
+                <div class="section-inner">
+                    <div class="section-header">
+                        <div class="section-title-wrap">
+                            <div class="section-eyebrow">Servicii principale</div>
+                            <h2 class="section-title">Ce putem realiza în atelierul DAN WOOD FURNITURE</h2>
+                        </div>
+                        <div class="section-subtitle">
+                            De la proiectarea ergonomică a unei bucătării compacte până la mobilarea completă a unui sediu de firmă, integrăm design, producție și montaj pentru un rezultat coerent.
+                        </div>
+                    </div>
+                    <div class="services-grid">
+                        <div class="services-list">
+                            <article class="service-card">
+                                <div class="service-icon">H</div>
+                                <div>
+                                    <h3 class="service-title">Mobilier pentru locuințe</h3>
+                                    <p class="service-text">
+                                        Proiectăm și producem dulapuri încastrate, dressing-uri, biblioteci, paturi cu spații de depozitare și mobilier pentru living adaptat
+                                        la dimensiunile apartamentului sau casei tale. Îmbinăm fronturi din MDF vopsit, lemn masiv sau PAL melaminat premium cu feronerie de calitate,
+                                        astfel încât piesele să reziste la utilizare intensă.
+                                    </p>
+                                    <p class="service-text">
+                                        Ne ocupăm de măsurători la fața locului, propunem soluții pentru mascarea instalațiilor și optimizăm fiecare centimetru de spațiu.
+                                        Poți alege dintre zeci de texturi și culori, iar noi îți pregătim mostre fizice pentru a decide în cunoștință de cauză.
+                                    </p>
+                                </div>
+                            </article>
+                            <article class="service-card">
+                                <div class="service-icon">I</div>
+                                <div>
+                                    <h3 class="service-title">Mobilier pentru spații instituționale și comerciale</h3>
+                                    <p class="service-text">
+                                        Amenajăm recepții, săli de așteptare, birouri operaționale, spații educaționale și cabinete medicale,
+                                        cu mobilier adaptat fluxului de lucru și normelor de siguranță. Proiectăm module care pot fi reconfigurate în timp,
+                                        pentru ca spațiul să poată evolua odată cu activitatea ta.
+                                    </p>
+                                    <p class="service-text">
+                                        Folosim materiale ușor de întreținut și rezistente la trafic intens, iar pentru proiectele instituționale
+                                        oferim documentația tehnică necesară și coordonăm montajul astfel încât să nu întrerupem activitatea curentă.
+                                    </p>
+                                </div>
+                            </article>
+                            <article class="service-card">
+                                <div class="service-icon">K</div>
+                                <div>
+                                    <h3 class="service-title">Bucătării la comandă</h3>
+                                    <p class="service-text">
+                                        Realizăm bucătării complete, de la configurații liniare pentru garsoniere până la insule generoase pentru case familiale.
+                                        Integrăm electrocasnice încorporabile, corpuri de iluminat, sertare organizate și sisteme de colț care fac accesibil întregul spațiu.
+                                    </p>
+                                    <p class="service-text">
+                                        Îți punem la dispoziție randări 3D detaliate, propuneri de materiale și recomandări de electrocasnice,
+                                        astfel încât să vezi din timp cum va arăta și cum va funcționa bucătăria ta în viața de zi cu zi.
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                        <aside class="services-side">
+                            <div class="services-side-card">
+                                <h3 class="services-side-title">Servicii digitale integrate</h3>
+                                <p class="services-side-text">
+                                    Pentru proiectele care o permit, lucrăm cu software de proiectare asistată și trimitem planurile direct
+                                    către utilajele de debitare CNC, ceea ce reduce timpii de execuție și crește precizia elementelor.
+                                </p>
+                            </div>
+                            <div class="services-side-card">
+                                <h3 class="services-side-title">Consultanță pentru dezvoltatori și arhitecți</h3>
+                                <p class="services-side-text">
+                                    Colaborăm cu birouri de arhitectură și dezvoltatori imobiliari pentru a pregăti pachete de mobilier standardizate
+                                    pentru ansambluri rezidențiale sau spații de birouri, folosind modele repetabile, dar ușor personalizabile.
+                                </p>
+                            </div>
+                            <div class="services-side-card">
+                                <h3 class="services-side-title">Asistență post-montaj</h3>
+                                <p class="services-side-text">
+                                    După montaj, oferim reglaje fine, intervenții de întreținere și actualizări ale elementelor de feronerie,
+                                    astfel încât mobilierul să-și păstreze forma și funcționalitatea în timp.
+                                </p>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="beneficii" class="section">
+            <div class="container">
+                <div class="section-inner">
+                    <div class="section-header">
+                        <div class="section-title-wrap">
+                            <div class="section-eyebrow">Avantajele colaborării</div>
+                            <h2 class="section-title">De ce clienții aleg din nou atelierul nostru</h2>
+                        </div>
+                        <div class="section-subtitle">
+                            Filosofia noastră de lucru se bazează pe transparență, responsabilitate față de materiale și o comunicare clară pe tot parcursul proiectului.
+                        </div>
+                    </div>
+                    <div class="benefits-layout">
+                        <div class="benefits-grid">
+                            <article class="benefit-card">
+                                <div class="benefit-icon">✓</div>
+                                <h3 class="benefit-title">Design orientat după viața ta reală</h3>
+                                <p class="benefit-text">
+                                    Nu propunem doar imagini frumoase, ci scenarii concrete: câte persoane folosesc spațiul, ce obiecte trebuie depozitate,
+                                    ce trasee de circulație există. Astfel alegem volumele, înălțimile și feroneria potrivită pentru fiecare cameră.
+                                </p>
+                            </article>
+                            <article class="benefit-card">
+                                <div class="benefit-icon">✓</div>
+                                <h3 class="benefit-title">Control complet al producției</h3>
+                                <p class="benefit-text">
+                                    Toate elementele sunt realizate în atelierul nostru din Apahida, fără subcontractări opace. Putem ajusta rapid
+                                    dimensiuni, texturi sau detalii constructive atunci când apar noi nevoi în timpul proiectului.
+                                </p>
+                            </article>
+                            <article class="benefit-card">
+                                <div class="benefit-icon">✓</div>
+                                <h3 class="benefit-title">Calendar clar și actualizări periodice</h3>
+                                <p class="benefit-text">
+                                    Setăm de la început un calendar estimativ, împărțit în etape, și îți trimitem fotografii sau scurte clipuri video
+                                    din timpul producției, astfel încât să știi mereu în ce stadiu se află mobilierul tău.
+                                </p>
+                            </article>
+                        </div>
+                        <div class="benefits-note">
+                            Lucrăm cu contract și deviz detaliat, astfel încât fiecare piesă să fie transparentă din punct de vedere al costurilor.
+                            Respectăm bugetul agreat și, dacă apar modificări cerute de tine, le discutăm înainte pentru a ajusta investiția finală.
+                            Scopul nostru este ca noul mobilier să îți aducă confort zilnic și o valoare adăugată reală spațiului pe termen lung.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proces" class="section">
+            <div class="container">
+                <div class="section-inner">
+                    <div class="section-header">
+                        <div class="section-title-wrap">
+                            <div class="section-eyebrow">Pașii colaborării</div>
+                            <h2 class="section-title">Cum transformăm o idee de mobilier într-un proiect finalizat</h2>
+                        </div>
+                        <div class="section-subtitle">
+                            Procesul nostru este construit astfel încât să știi de la început ce urmează, cât durează fiecare etapă și ce implică din partea ta.
+                        </div>
+                    </div>
+                    <div class="process-layout">
+                        <div class="process-steps">
+                            <div class="process-step">
+                                <div class="process-step-number">1</div>
+                                <div class="process-step-body">
+                                    <h3 class="process-step-title">Descoperire și concept</h3>
+                                    <p class="process-step-text">
+                                        Discutăm despre spațiul tău, buget și stilul preferat, analizăm planurile sau realizăm măsurători la fața locului
+                                        în Apahida sau în zona Cluj. Pe baza acestor informații pregătim propuneri de layout și idei de materiale.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <div class="process-step-number">2</div>
+                                <div class="process-step-body">
+                                    <h3 class="process-step-title">Proiectare detaliată și producție</h3>
+                                    <p class="process-step-text">
+                                        Construim modele 3D, definim dimensiunile finale, tipul de feronerie și finisajele, apoi trecem în etapa de debitare,
+                                        asamblare și finisare în atelierul nostru. În această fază îți trimitem actualizări periodice privind stadiul proiectului.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <div class="process-step-number">3</div>
+                                <div class="process-step-body">
+                                    <h3 class="process-step-title">Livrare, montaj și reglaje</h3>
+                                    <p class="process-step-text">
+                                        Stabilim împreună ziua montajului, livrăm mobilierul la locația ta și îl instalăm complet, realizând toate reglajele necesare.
+                                        La final, trecem împreună prin verificările de calitate și îți prezentăm recomandările de întreținere.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <aside class="process-side-card">
+                            <div class="process-side-tag">Proces clar, în 3 etape</div>
+                            <h3 class="process-side-title">Transparență de la primul mesaj până la ultimul șurub strâns</h3>
+                            <p class="process-side-text">
+                                Pentru fiecare proiect definim un punct unic de contact din echipa noastră, care îți răspunde la întrebări și te ține la curent
+                                cu evoluția lucrărilor. Primești calendarul estimat, condițiile de garanție și recomandări de întreținere, astfel încât să te bucuri
+                                de mobilier fără griji și pe termen lung.
+                            </p>
+                            <p class="process-side-text">
+                                Dacă dorești, putem planifica vizite în atelier în timpul producției, ca să vezi direct cum se lucrează la proiectul tău.
+                            </p>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-inner">
+                    <div class="section-header">
+                        <div class="section-title-wrap">
+                            <div class="section-eyebrow">Următorul pas</div>
+                            <h2 class="section-title">Hai să vorbim despre mobilierul pe care ți-l dorești</h2>
+                        </div>
+                        <div class="section-subtitle">
+                            Scrie-ne câteva detalii despre spațiul pe care vrei să îl amenajezi, iar noi revenim cu întrebări clare și propuneri de buget în cel mai scurt timp.
+                        </div>
+                    </div>
+                    <div class="contact-layout">
+                        <div>
+                            <p class="section-bullet">
+                                Mesajul tău poate fi scurt – important este să înțelegem ce vrei să schimbi în locuință sau în spațiul tău profesional.
+                            </p>
+                            <div class="contact-phrases">
+                                <p class="contact-phrase">
+                                    Spune-ne câte camere sau încăperi vrei să mobilăm și ce termene ai în minte.
+                                </p>
+                                <p class="contact-phrase">
+                                    Menționează dacă ai deja planuri sau schițe și dacă există elemente ce trebuie integrate: electrocasnice, radiatoare, grinzi.
+                                </p>
+                                <p class="contact-phrase">
+                                    Dacă preferi un anumit stil (minimalist, clasic, industrial) sau anumite nuanțe, notează-le direct în mesaj.
+                                </p>
+                            </div>
+                        </div>
+                        <aside class="contact-card">
+                            <div class="contact-chip-row">
+                                <div class="contact-chip">Răspuns în mod normal în 1–2 zile lucrătoare</div>
+                                <div class="contact-chip">Fără obligație de colaborare</div>
+                            </div>
+                            <h3 class="contact-card-title">Trimite-ne un mesaj prin formularul online</h3>
+                            <p class="contact-card-text">
+                                Formularul îți permite să ne lași adresa de e-mail și detalii despre proiect, iar noi revenim cu o propunere inițială.
+                                Nu colectăm mai multe date decât este necesar pentru a te putea contacta.
+                            </p>
+                            <div class="contact-card-actions">
+                                <button class="btn" type="button" id="openContactSection">
+                                    <span>Deschide formularul de contact</span>
+                                    <span class="icon">✉</span>
+                                </button>
+                               
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-contact">
+                <div>DAN WOOD FURNITURE S.R.L.</div>
+                <div>Adresa atelierului: STR. LIBERTĂȚII NR. 192, 407035 Apahida, România</div>
+                <div>E-mail: <a href="mailto:info@danwoodfurniture.pro">info@danwoodfurniture.pro</a></div>
+            </div>
+            <div class="footer-meta">
+                <div>Produse: mobilier pentru locuințe, spații instituționale și bucătării la comandă.</div>
+                <div>&copy; <span id="year"></span> DAN WOOD FURNITURE S.R.L. Toate drepturile rezervate.</div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<div class="modal-backdrop" id="contactModal">
+    <div class="modal">
+        <div class="modal-header">
+            <div class="modal-title">Formular de contact</div>
+            <button class="modal-close" type="button" data-close-modal="true">×</button>
+        </div>
+        <div class="modal-body">
+            <p>
+                Completează câmpurile de mai jos și spune-ne, pe scurt, ce fel de mobilier ai nevoie.
+                Vom folosi adresa ta de e-mail doar pentru a-ți răspunde la mesaj.
+            </p>
+            <form class="modal-form" id="contactForm">
+                <div class="form-field">
+                    <label class="form-label" for="nume">Nume și prenume</label>
+                    <input class="form-input" id="nume" name="nume" type="text" placeholder="Ex.: Andrei Pop" required>
+                </div>
+                <div class="form-field">
+                    <label class="form-label" for="email">Adresă de e-mail</label>
+                    <input class="form-input" id="email" name="email" type="email" placeholder="Ex.: nume@domeniu.ro" required>
+                </div>
+                <div class="form-field">
+                    <label class="form-label" for="tipProiect">Tip de proiect</label>
+                    <input class="form-input" id="tipProiect" name="tipProiect" type="text" placeholder="Bucătărie, dressing, birou, spațiu instituțional etc.">
+                </div>
+                <div class="form-field">
+                    <label class="form-label" for="mesaj">Mesajul tău</label>
+                    <textarea class="form-textarea" id="mesaj" name="mesaj" placeholder="Spune-ne câteva detalii despre spațiu, dimensiuni aproximative și termenele dorite." required></textarea>
+                    <div class="form-hint">
+                        Poți adăuga și un link către fotografii sau planuri, dacă le ai deja online.
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label class="form-label">
+                        <input type="checkbox" required>
+                        <span>Confirm că sunt de acord ca datele introduse să fie folosite pentru a primi un răspuns la acest mesaj.</span>
+                    </label>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" type="submit">
+                        <span>Trimite mesajul</span>
+                        <span class="icon">➜</span>
+                    </button>
+                    <div class="form-hint">
+                        Butonul de mai sus trimite mesajul doar către echipa DAN WOOD FURNITURE și nu îl salvează într-o listă de newsletter.
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal-backdrop" id="successModal">
+    <div class="modal">
+        <div class="modal-header">
+            <div class="modal-title">Mulțumim pentru mesaj!</div>
+            <button class="modal-close" type="button" data-close-modal="true">×</button>
+        </div>
+        <div class="modal-body modal-success-body">
+            Mesajul tău a fost înregistrat cu succes în sistemul nostru intern.
+            Îți vom răspunde pe adresa de e-mail introdusă în cel mai scurt timp posibil, în timpul programului de lucru.
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-close-modal="true">
+                <span>Închide fereastra</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const contactModal = document.getElementById("contactModal");
+    const successModal = document.getElementById("successModal");
+    const contactForm = document.getElementById("contactForm");
+    const openContactButtons = [
+        document.getElementById("openContactHero"),
+        document.getElementById("openContactHeader"),
+        document.getElementById("openContactSection")
+    ];
+
+    openContactButtons.forEach(function (btn) {
+        if (btn) {
+            btn.addEventListener("click", function () {
+                contactModal.classList.add("visible");
+            });
+        }
+    });
+
+    document.querySelectorAll("[data-close-modal]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+            contactModal.classList.remove("visible");
+            successModal.classList.remove("visible");
+        });
+    });
+
+    contactModal.addEventListener("click", function (event) {
+        if (event.target === contactModal) {
+            contactModal.classList.remove("visible");
+        }
+    });
+
+    successModal.addEventListener("click", function (event) {
+        if (event.target === successModal) {
+            successModal.classList.remove("visible");
+        }
+    });
+
+    if (contactForm) {
+        contactForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            contactModal.classList.remove("visible");
+            successModal.classList.add("visible");
+            contactForm.reset();
+        });
+    }
+
+    const yearSpan = document.getElementById("year");
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+</script>
+</body>
+</html>
